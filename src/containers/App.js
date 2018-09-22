@@ -6,6 +6,7 @@ import Scroll from "../components/Scroll";
 import ErrorBoundry from '../components/ErrorBoundry';
 
 import { setSearchField, requestRobots } from "../actions";
+import Header from '../components/Header';
 
 export class App extends Component {
     // constructor() {
@@ -39,7 +40,7 @@ export class App extends Component {
         <h1>Loading...</h1> :
         (
             <div className="tc">
-                <h1>RoboFriends</h1>
+                <Header />
                 <SearchBox searchChange={onSearchChange} />
                 <Scroll>
                     <ErrorBoundry>
